@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-image-devops",
+  "version": "1.0.0",
+  "description": " nodejs for TP devops",
+  "author": "Maxime Maitrot <maitrot@et.esiea.fr>",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts":{
+    "start": "node app.js",
+    "test": "echo \"Erreur : pas de Test specifie\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
