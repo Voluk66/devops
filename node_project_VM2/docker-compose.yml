@@ -1,5 +1,13 @@
 version: "3.3"
 services:
+  reverseproxy:
+    image: reverseproxy
+    ports:
+      - "80:80"
+  node-image:
+    image: voluk/nodejs-image-devops
+    ports:
+      - "8080:8080"
   web:
     build:
       context: ./
@@ -8,6 +16,3 @@ services:
     command: npm run start
     ports:
       - "8081:8081"
-    environment:
-      NODE_ENV: development
-      DEBUG: node_project_VM2:*
