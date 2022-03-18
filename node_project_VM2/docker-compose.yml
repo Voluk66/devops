@@ -1,14 +1,16 @@
-version: "3.3"
+version: "3"
 services:
-  reverseproxy:
-    image: reverseproxy
+  nginx:
+    image: nginx:latest
     ports:
       - "80:80"
-  node-image:
+    volumes:
+      - /home/vagrant/node_project_VM2/nginx-image:/etc/nginx/conf.d
+  my-app-1:
     image: voluk/nodejs-image-devops
     ports:
       - "8080:8080"
-  web:
+  my-app-2:
     build:
       context: ./
     volumes:
